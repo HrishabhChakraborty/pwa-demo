@@ -1,0 +1,9 @@
+// sw.js
+self.addEventListener('push', event => {
+    const data = event.data.json();
+    self.registration.showNotification(data.title, {
+      body: data.message,
+      icon: '/icons/icon-192x192.png',
+    });
+  });
+  
